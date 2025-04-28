@@ -1,0 +1,27 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color;
+    background-color: $bg;
+}
+
+.btn {
+    height: 40px;
+    margin-top: 16px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: $blue;
+}

@@ -1,0 +1,35 @@
+@import "common";
+
+h2 {
+    font: {
+        size: 24px;
+        weight: 600;
+    }
+
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+}
+
+.item {
+    max-width: 392px;
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #F6F6FE;
+
+    ul {
+        margin-top: 16px;
+
+        li {
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid $gray;
+
+            &:not(:first-child) {
+                margin-top: 8px;
+            }
+        }
+    }
+}

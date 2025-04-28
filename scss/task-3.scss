@@ -1,0 +1,27 @@
+@import "common";
+
+h2 {
+    font: {
+        size: 24px;
+        weight: 600;
+    }
+
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+}
+
+input {
+    width: 360px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid $gray;
+
+    &::placeholder {
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: $color;
+    }
+}
