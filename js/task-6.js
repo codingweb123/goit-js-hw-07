@@ -6,7 +6,7 @@ function getRandomHexColor() {
 const MIN = 30,
 	MAX = 70,
 	STEP = 10,
-	MAXCUBES = 5
+	MAXCUBES = 100
 const createBtn = document.querySelector(".create-btn"),
 	destroyBtn = document.querySelector(".destroy-btn"),
 	createInput = document.querySelector(".create-input"),
@@ -19,7 +19,7 @@ createBtn.onclick = () => {
 	}
 	let cubesHTML = ""
 	for (let i = 0; i < cubes; i++) {
-		const width = MIN + STEP * i
+		const width = MIN + STEP * i > MAX ? MAX : MIN + STEP * i
 		const height = width
 		cubesHTML += `<div style="width:${width}px;height:${height}px;background-color:${getRandomHexColor()}"></div>`
 	}
@@ -29,10 +29,10 @@ createBtn.onclick = () => {
 	)
 }
 destroyBtn.onclick = () => {
-	const boxes = [...document.querySelectorAll(".boxes .box")]
-	if (boxes.length <= 1) {
+	const boxes = document.querySelectorAll(".boxes .box")
+	if (boxes.length === 0) {
 		alert("There are no boxes to delete")
 		return
 	}
-	boxes.pop().remove()
+	document.querySelector(".boxes").innerHTML = ""
 }

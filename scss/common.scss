@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     padding: 24px;
     font-family: 'Montserrat', sans-serif;

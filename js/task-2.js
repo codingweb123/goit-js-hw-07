@@ -28,7 +28,7 @@ const imagesBlock = document.querySelector(".gallery")
 const getImages = () => {
   let imagesText = ""
   for (const image of images) {
-    imagesText += `<img src="${image.url}" alt="${image.alt}" />`
+    imagesText += `<li><img src="${image.url}" alt="${image.alt}" /></li>`
   }
   imagesBlock.insertAdjacentHTML("beforeend", imagesText)
 }

@@ -1,3 +1,6 @@
 const myInput = document.querySelector("#name-input"),
 	toChange = document.querySelector("#name-output")
-myInput.onkeydown = myInput.onkeyup = () => toChange.textContent = myInput.value
+myInput.oninput = () => {
+	const value = myInput.value.trim()
+	toChange.textContent = value === "" ? (myInput.value = "Anonymous") : value
+}
